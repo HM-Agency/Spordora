@@ -1,0 +1,183 @@
+/* Font */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  padding-top: 100px;
+}
+
+/* Nav */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-section a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  background-image: url('StadeBocaJunior.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  color: white;
+  font-size: 2.2rem;
+  font-style: italic;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Zone principale */
+main {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e6f2ff, #cce0ff);
+}
+
+/* Grille des cartes */
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Lien de chaque article */
+.article-link {
+  text-decoration: none;
+  color: inherit;
+  width: calc(33.333% - 20px);
+  min-width: 280px;
+  max-width: 350px;
+  cursor: pointer;
+}
+
+/* Carte individuelle */
+.articles article {
+  background-color: #e0ecff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.articles article:hover {
+  transform: scale(1.05);
+}
+
+.articles article img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+footer {
+  padding: 2em;
+  background: #fff;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo {
+  height: 30px;
+  margin-bottom: 1em;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .article-link {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .article-link {
+    width: 100%;
+  }
+
+  .hero-text {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    width: 95%;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .nav-section {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-logo {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
